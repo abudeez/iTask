@@ -1,10 +1,11 @@
 <!-- filepath: /c:/Users/Abdullah/Desktop/Makers Task/iTask/src/components/tasks/TaskItem.vue -->
 <template>
   <div 
-    class="card overflow-hidden group hover:border-indigo-300 dark:hover:border-indigo-700 transition duration-300"
+    class="card overflow-hidden group hover:border-indigo-300 dark:hover:border-indigo-700 transition duration-300 flex flex-col"
     :class="{ 'opacity-75 hover:opacity-100': task.status === 'completed' }"
   >
-    <div class="p-5">
+    <!-- Content Section - Will expand to fill available space -->
+    <div class="p-5 flex-grow">
       <div class="flex justify-between items-start">
         <h3 
           class="text-lg font-semibold leading-tight mb-1.5 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition duration-300"
@@ -38,7 +39,8 @@
       </div>
     </div>
     
-    <div class="flex border-t border-gray-100 dark:border-gray-700 divide-x divide-gray-100 dark:divide-gray-700">
+    <!-- Action Buttons - Always at bottom -->
+    <div class="mt-auto flex border-t border-gray-100 dark:border-gray-700 divide-x divide-gray-100 dark:divide-gray-700">
       <button 
         v-if="task.status !== 'completed'" 
         @click="markCompleted" 
