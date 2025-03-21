@@ -43,7 +43,7 @@
     <div class="card p-6">
       <h2 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Recent Tasks</h2>
       <TaskList 
-        title="Recent Tasks"
+        title=""
         :show-filters="false"
         @edit="editTask"
       />
